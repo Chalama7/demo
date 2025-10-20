@@ -1,0 +1,13 @@
+# Go build
+bin/
+vendor/
+*.exe
+*.log
+*.out
+*.test
+*.tmp
+.DS_Store
+
+# Kubebuilder
+config/manager/kustomization.yaml
+.kcp/

@@ -1,0 +1,44 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - swacd.swacd.io
+  resources:
+  - akamaiproviders
+  - cloudflareproviders
+  - edgeroutes
+  - originservices
+  - tenants
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - swacd.swacd.io
+  resources:
+  - akamaiproviders/finalizers
+  - cloudflareproviders/finalizers
+  - edgeroutes/finalizers
+  - originservices/finalizers
+  - tenants/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - swacd.swacd.io
+  resources:
+  - akamaiproviders/status
+  - cloudflareproviders/status
+  - edgeroutes/status
+  - originservices/status
+  - tenants/status
+  verbs:
+  - get
+  - patch
+  - update

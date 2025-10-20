@@ -1,0 +1,9 @@
+apiVersion: swacd.swacd.io/v1alpha1
+kind: CloudflareProvider
+metadata:
+  name: cloudflare-prod
+spec:
+  accountID: "cf-account-123"
+  apiTokenSecretRef:
+    name: cloudflare-api-token
+    key: token
